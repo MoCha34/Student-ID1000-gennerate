@@ -14,17 +14,14 @@ def Idgroup():
 
 '''This is gennerate student-id 0001-1000 by string and convert this to integer and get function chack condition '''
 def Genner(gx):
-    numstart = 0
-     
+    numstart = 0   
     for i in range(gx):
         numstart=numstart+1
         id=Conyear()+Idgroup()+str(numstart).zfill(4)    #sum all number form string can change to integer
-        if int(i)%2==0:                                  #Chack condition for proposition
-            #print(id,end="")
+        if int(i)%2==0:                                  #Chack condition for proposition        
             ifs=(int(id)%5)*2+1
             print(id+str(ifs))
-        else:
-            #print(id,end="")
+        else:           
             els=(int(id)%5)*2
             print(id+str(els))    
 Genner(1000)       
